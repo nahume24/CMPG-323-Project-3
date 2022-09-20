@@ -8,3 +8,7 @@
 # How the user would use the App
 
 # Reference
+- Naik K. 2021. Design Patterns In C# .NET. https://www.c-sharpcorner.com/UploadFile/bd5be5/design-patterns-in-net/ Date of access: 
+
+- Velayutham M. 2012. Architectural Patterns in .NET. https://www.c-sharpcorner.com/uploadfile/babu_2082/architectural-patterns-in-net/ Date of access: 
+
