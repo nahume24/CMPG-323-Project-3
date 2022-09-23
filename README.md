@@ -1,7 +1,9 @@
 # CMPG-323-Project-3-32210310
 
 ![web api](https://user-images.githubusercontent.com/38375869/191209969-74caa68e-3ed2-4ee1-bd25-fd5d98a7b6ff.gif)
-
+ 
+ # Credit
+ The ConnectOffice, Database.sql and IOT Note Project it belongs to MS Jacqui Muller. I forked her repository called CMPG-323-IOT-Device-Manangement I then merge it to my repository in order to make it private.
 
 # How stakeholders will use the report
 
