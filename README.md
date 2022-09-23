@@ -23,6 +23,7 @@
 - Vivas T.2021. SOLID with .NET Core. https://www.c-sharpcorner.com/article/solid-with-net-core/ Date of access: 20 September 2022
 
 - The interactive Studio. 2021. Host Web Api (node js) in Microsoft Azure Cloud. https://www.youtube.com/watch?v=k6GQRW39fQg Date of access: 
+- Robison Handy and Technology Services. 2020. Merge Two Git Repos into One. https://www.youtube.com/watch?v=DLOcQQgyQWo&t=154s Date of access: 23 September 2022
 
 
 
