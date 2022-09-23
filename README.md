@@ -1,15 +1,16 @@
 # CMPG-323-Project-3-32210310
-
 ![web api](https://user-images.githubusercontent.com/38375869/191209969-74caa68e-3ed2-4ee1-bd25-fd5d98a7b6ff.gif)
  
  # Credit
- The ConnectOffice, Database.sql and IOT Note Project it belongs to MS Jacqui Muller. I forked her repository called CMPG-323-IOT-Device-Manangement I then merge it to my repository in order to make it private.
+ The ConnectOffice, Database.sql and IOT Note Project it belongs to MS Jacqui Muller. I forked her repository called CMPG-323-IOT-Device-Manangement I then merge it to my repository in order to make it private. 
  
- # Project set up/Desciption
-The current GitHub Project was cloned and given a new name. The 
+ # Project set up/ Desciption
+The Project is based on ASP.NET Core MVC. It will be more focused on the Modellers,View and Controllers. The current GitHub Project was forked and given a new name. Will have to create an appsettings.json to add the connnection string to connect to the hosted database. Standards and Patterns will be created to  enhanced and improved the project. Also will demo the understaning of architectural patterns.Web API will be hosted on Azure.
 # How stakeholders will use the report
 
 # How the user would use the App
+The resource group:
+The password:
 
 # Reference
 - FreeCodeCamp.org. 2021. Learn ASP.NET Core MVC (.NET 6) - Full Course. https://www.youtube.com/watch?v=hZ1DASYd9rk Date of access: 09 September 2022
