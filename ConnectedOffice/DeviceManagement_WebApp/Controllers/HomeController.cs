@@ -17,9 +17,11 @@ namespace DeviceManagement_WebApp.Controllers
         {
             _logger = logger;
         }
-
+        //Will get list of Devices from the DeviceService
         public IActionResult Index()
         {
+            //deviceSrvice = new DeviceService();
+            //return View(deviceService.getAll());
             return View();
         }
 
