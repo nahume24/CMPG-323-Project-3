@@ -12,7 +12,15 @@ namespace DeviceManagement_WebApp.Controllers
 {
     public class DevicesController : Controller
     {
+        //[Route("api/[Controller]" )]
+       // [ApiController]
+        private readonly IDeviceRepository _deviceRepository;
         private readonly ConnectedOfficeContext _context;
+
+        public DevicesController(IDeviceRepository deviceRepository)
+        {
+            _deviceRepository = deviceRepository;
+        }
 
         public DevicesController(ConnectedOfficeContext context)
         {
@@ -22,11 +30,7 @@ namespace DeviceManagement_WebApp.Controllers
         // GET: Devices
         public async Task<IActionResult> Index()
         {
-            //DevicesRepository DeviceRepository = new DeviceRepository();
-
-
-            var connectedOfficeContext = _context.Device.Include(d => d.Category).Include(d => d.Zone);
-            return View(await connectedOfficeContext.ToListAsync());
+            return View(_deviceRepository.GetAll());
         }
 
         // GET: Devices/Details/5

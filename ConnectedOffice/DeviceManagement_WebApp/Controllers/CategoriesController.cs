@@ -7,12 +7,22 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DeviceManagement_WebApp.Data;
 using DeviceManagement_WebApp.Models;
+using DeviceManagement_WebApp.Repository;
 
 namespace DeviceManagement_WebApp.Controllers
 {
     public class CategoriesController : Controller
     {
+
+        //interface instead as it needs to inherit the IGenericRepository interface
         private readonly ConnectedOfficeContext _context;
+
+        private readonly ICategoriesRepository _categoryRepositotory;
+        public CategoriesController(ICategoriesRepository categoryRepositotory)
+        {
+            _categoryRepositotory = categoryRepositotory;
+            
+        }       
 
         public CategoriesController(ConnectedOfficeContext context)
         {
@@ -22,7 +32,8 @@ namespace DeviceManagement_WebApp.Controllers
         // GET: Categories
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Category.ToListAsync());
+            return View(_categoryRepositotory.GetAll());
+ 
         }
 
         // GET: Categories/Details/5
@@ -52,6 +63,7 @@ namespace DeviceManagement_WebApp.Controllers
         // POST: Categories/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("CategoryId,CategoryName,CategoryDescription,DateCreated")] Category category)
