@@ -11,8 +11,8 @@ namespace DeviceManagement_WebApp.Repository
         {
 
         }
-        //GET: Device
-        public Zone GetMostRecentDevice()
+        //GET: Zone
+        public Zone GetMostRecentZone()
         {
             return _context.Zone.OrderByDescending(zone => zone.DateCreated).FirstOrDefault();
         }

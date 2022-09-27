@@ -17,15 +17,16 @@ namespace DeviceManagement_WebApp.Controllers
         private readonly IDeviceRepository _deviceRepository;
         private readonly ConnectedOfficeContext _context;
 
-        public DevicesController(IDeviceRepository deviceRepository)
+        public DevicesController(IDeviceRepository deviceRepository , ConnectedOfficeContext context)
         {
             _deviceRepository = deviceRepository;
-        }
-
-        public DevicesController(ConnectedOfficeContext context)
-        {
             _context = context;
         }
+
+        //public DevicesController(ConnectedOfficeContext context)
+        //{
+        //    _context = context;
+        //}
 
         // GET: Devices
         public async Task<IActionResult> Index()

@@ -18,16 +18,16 @@ namespace DeviceManagement_WebApp.Controllers
         private readonly ConnectedOfficeContext _context;
 
         private readonly ICategoriesRepository _categoryRepositotory;
-        public CategoriesController(ICategoriesRepository categoryRepositotory)
+        public CategoriesController(ICategoriesRepository categoryRepositotory, ConnectedOfficeContext context)
         {
             _categoryRepositotory = categoryRepositotory;
-            
+            _context = context;
         }       
 
-        public CategoriesController(ConnectedOfficeContext context)
-        {
-            _context = context;
-        }
+        //public CategoriesController(ConnectedOfficeContext context)
+        //{
+            //_context = context;
+        //}
 
         // GET: Categories
         public async Task<IActionResult> Index()
