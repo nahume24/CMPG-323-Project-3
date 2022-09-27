@@ -36,6 +36,10 @@ namespace DeviceManagement_WebApp.Repository
         {
             return _context.Set<T>().Find(id);
         }
+        public T GetById(Guid? id)
+        {
+            return _context.Set<T>().Find(id);
+        }
         public void Remove (T entity)
         {
             _context.Set<T>().Remove(entity);
@@ -43,6 +47,13 @@ namespace DeviceManagement_WebApp.Repository
         public void RemoveRange(IEnumerable<T> entities)
         {
             _context.Set<T>().RemoveRange(entities);
+        }
+        
+        public void Update(T entity)
+        {
+            _context.Set<T>().Update(entity);
+            _context.Update(entity);
+            _context.SaveChanges();
         }
     }
 }
