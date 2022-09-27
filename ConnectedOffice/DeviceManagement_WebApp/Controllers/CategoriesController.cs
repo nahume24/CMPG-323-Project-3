@@ -7,22 +7,33 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DeviceManagement_WebApp.Data;
 using DeviceManagement_WebApp.Models;
+using DeviceManagement_WebApp.Repository;
 
 namespace DeviceManagement_WebApp.Controllers
 {
     public class CategoriesController : Controller
     {
+
+        //interface instead as it needs to inherit the IGenericRepository interface
         private readonly ConnectedOfficeContext _context;
 
-        public CategoriesController(ConnectedOfficeContext context)
+        private readonly ICategoriesRepository _categoryRepositotory;
+        public CategoriesController(ICategoriesRepository categoryRepositotory, ConnectedOfficeContext context)
         {
+            _categoryRepositotory = categoryRepositotory;
             _context = context;
-        }
+        }       
+
+        //public CategoriesController(ConnectedOfficeContext context)
+        //{
+            //_context = context;
+        //}
 
         // GET: Categories
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Category.ToListAsync());
+            return View(_categoryRepositotory.GetAll());
+ 
         }
 
         // GET: Categories/Details/5
@@ -33,8 +44,7 @@ namespace DeviceManagement_WebApp.Controllers
                 return NotFound();
             }
 
-            var category = await _context.Category
-                .FirstOrDefaultAsync(m => m.CategoryId == id);
+            var category = _categoryRepositotory.GetById(id);
             if (category == null)
             {
                 return NotFound();
@@ -52,13 +62,13 @@ namespace DeviceManagement_WebApp.Controllers
         // POST: Categories/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("CategoryId,CategoryName,CategoryDescription,DateCreated")] Category category)
         {
             category.CategoryId = Guid.NewGuid();
-            _context.Add(category);
-            await _context.SaveChangesAsync();
+            _categoryRepositotory.Add(category);
             return RedirectToAction(nameof(Index));
         }
 
@@ -70,7 +80,7 @@ namespace DeviceManagement_WebApp.Controllers
                 return NotFound();
             }
 
-            var category = await _context.Category.FindAsync(id);
+            var category = _categoryRepositotory.GetById(id);
             if (category == null)
             {
                 return NotFound();
@@ -91,7 +101,8 @@ namespace DeviceManagement_WebApp.Controllers
             }
             try
             {
-                _context.Update(category);
+                _categoryRepositotory.Update(category);
+                //_context.Update(category);
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
