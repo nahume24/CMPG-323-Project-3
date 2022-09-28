@@ -10,7 +10,7 @@ The Project is based on ASP.NET Core MVC. It will be more focused on the Modelle
 
 # How the user would use the App
 The resource group:
-The password:
+TApp service: 
 
 # Reference
 - FreeCodeCamp.org. 2021. Learn ASP.NET Core MVC (.NET 6) - Full Course. https://www.youtube.com/watch?v=hZ1DASYd9rk Date of access: 09 September 2022
@@ -32,13 +32,27 @@ The password:
 
 - SathyaBhat. 2016.Merge Branches into Master Branch in GitHub using Pull Requests. https://developers.sap.com/tutorials/webide-github-merge-pull-request.html Date of access: 22 September 2022
 
--Wes Doyle. 2020. GitHub Forks and Pull Requests| Step by Step. https://www.youtube.com/watch?v=a_FLqX3vGR4 Date of access: 23 September 2022
+- Wes Doyle. 2020. GitHub Forks and Pull Requests| Step by Step. https://www.youtube.com/watch?v=a_FLqX3vGR4 Date of access: 23 September 2022
 
 - Jake Vanderplas. 2017. Creating a Simple Github Pull Request. https://www.youtube.com/watch?v=rgbCcBNZcdQ Date of access: 22 September 2022
 
 - The interactive Studio. 2021. Host Web Api (node js) in Microsoft Azure Cloud. https://www.youtube.com/watch?v=k6GQRW39fQg Date of access: 
 
 - Robison Handy and Technology Services. 2020. Merge Two Git Repos into One. https://www.youtube.com/watch?v=DLOcQQgyQWo&t=154s Date of access: 23 September 2022
+
+- Mircosoft Community. 2022. The type or namespace name "ProductDto" could not be found(are u missing a using directive or an assembly reference?). https://learn.microsoft.com/en-us/answers/questions/902756/cs0246-the-type-or-namespace-name-34productdto34-c.html Date of access: 27 September 2022
+
+- MS Learn. 2022. Building and cleaning projects. https://learn.microsoft.com/en-us/visualstudio/mac/building-and-cleaning-projects-and-solutions?view=vsmac-2022 Date of access: 28 September 2022
+
+- MS Learn. 2022. Compiler Error CS0246. https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/cs0246 Date of access: 28 September 2022
+
+- MS Learn. 2022. Manage references in a project. https://learn.microsoft.com/en-us/visualstudio/ide/managing-references-in-a-project?view=vs-2022 Date of access: 28 September 2022
+
+- .NET Core Tutorials. 2020. Fixing "This async method lacks 'await' operators and will run syncronously". https://dotnetcoretutorials.com/2020/11/09/fixing-this-async-method-lacks-await-operators-and-will-run-synchronously/ Date of access: 28 September 2022
+
+
+
+
 
 
 
