@@ -15,6 +15,6 @@ namespace DeviceManagement_WebApp.Repository
         void Remove(T entity);
         void RemoveRange(IEnumerable<T> objects);
         T GetById(Guid? id);
-        //void 
+       //void Update<T> entities();
     }
 }

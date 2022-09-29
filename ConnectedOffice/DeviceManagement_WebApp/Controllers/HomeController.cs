@@ -1,5 +1,7 @@
 ﻿using AspNetCore;
 using DeviceManagement_WebApp.Models;
+using DeviceManagement_WebApp.Repository;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;

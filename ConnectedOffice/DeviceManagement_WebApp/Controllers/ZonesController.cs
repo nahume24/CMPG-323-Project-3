@@ -17,7 +17,7 @@ namespace DeviceManagement_WebApp.Controllers
 
         public ZonesController(IZoneRepository zoneRepository, ConnectedOfficeContext context)
         {
-            _zoneRepository = zoneRepository;
+           // _zoneRepository = zoneRepository;
             _context = context;
         }
 
@@ -30,7 +30,9 @@ namespace DeviceManagement_WebApp.Controllers
         // GET: Zones
         public async Task<IActionResult> Index()
         {
-            return View(_zoneRepository.GetAll());
+            return View(await _context.Zone.ToListAsync());
+
+            //return View(_zoneRepository.GetAll());
         }
 
         // GET: Zones/Details/5

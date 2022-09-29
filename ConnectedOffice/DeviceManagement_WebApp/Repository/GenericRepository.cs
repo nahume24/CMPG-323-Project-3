@@ -1,5 +1,7 @@
 ﻿using DeviceManagement_WebApp.Data;
 using System;
+using DeviceManagement_WebApp.Models;
+using DeviceManagement_WebApp.Repository;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
