@@ -9,8 +9,10 @@ The Project is based on ASP.NET Core MVC. It will be more focused on the Modelle
 # How stakeholders will use the report
 
 # How the user would use the App
-The resource group:
+The resource group:rgProject 3
 App service: 
+32210310@student365.msfed.nwu.ac.za
+password:Nahume123!
 
 # Reference
 - FreeCodeCamp.org. 2021. Learn ASP.NET Core MVC (.NET 6) - Full Course. https://www.youtube.com/watch?v=hZ1DASYd9rk Date of access: 09 September 2022
@@ -60,6 +62,11 @@ App service:
 - IAMTimCorey. 2018. C# Async / Await - Make yor app more responsive and faster with asyncronous programming. https://www.youtube.com/watch?v=2moh18sh5p4&t=1492s Date of acess: 28 september 2022
 
 - MS Leran. 2022. Building and cleaning projects and solutions. https://learn.microsoft.com/en-us/visualstudio/mac/building-and-cleaning-projects-and-solutions?view=vsmac-2022 Date of access: 28 September 2022
+
+- MS Learn. 2022. Troubleshoot.NEt Framework targeting errors. https://learn.microsoft.com/en-us/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors?view=vs-2022 date of access: 29 September 2022
+
+- MS Learn. 2022. C# Complier Options to report errors and warnings. https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/errors-warnings Date of access: 29 September 2022
+
 
 
 
