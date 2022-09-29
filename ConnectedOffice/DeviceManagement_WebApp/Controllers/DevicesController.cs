@@ -12,32 +12,18 @@ namespace DeviceManagement_WebApp.Controllers
 {
     public class DevicesController : Controller
     {
-        //[Route("api/[Controller]" )]
-       // [ApiController]
-        private readonly IDeviceRepository _deviceRepository;
         private readonly ConnectedOfficeContext _context;
 
-        public DevicesController(IDeviceRepository deviceRepository , ConnectedOfficeContext context)
+        public DevicesController(ConnectedOfficeContext context)
         {
-            _deviceRepository = deviceRepository;
             _context = context;
         }
-
-        //public DevicesController(ConnectedOfficeContext context)
-        //{
-        //    _context = context;
-        //}
-
-        // GET: Devices
         public async Task<IActionResult> Index()
         {
             var connectedOfficeContext = _context.Device.Include(d => d.Category).Include(d => d.Zone);
             return View(await connectedOfficeContext.ToListAsync());
-
-            // return View(_deviceRepository.GetAll());
         }
 
-        // GET: Devices/Details/5
         public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null)
@@ -57,7 +43,6 @@ namespace DeviceManagement_WebApp.Controllers
             return View(device);
         }
 
-        // GET: Devices/Create
         public IActionResult Create()
         {
             ViewData["CategoryId"] = new SelectList(_context.Category, "CategoryId", "CategoryName");
@@ -65,11 +50,7 @@ namespace DeviceManagement_WebApp.Controllers
             return View();
         }
 
-        // POST: Devices/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("DeviceId,DeviceName,CategoryId,ZoneId,Status,IsActive,DateCreated")] Device device)
         {
             device.DeviceId = Guid.NewGuid();

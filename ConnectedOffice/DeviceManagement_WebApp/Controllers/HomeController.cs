@@ -1,7 +1,4 @@
-﻿using AspNetCore;
-using DeviceManagement_WebApp.Models;
-using DeviceManagement_WebApp.Repository;
-using Microsoft.AspNetCore;
+﻿using DeviceManagement_WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -14,20 +11,15 @@ namespace DeviceManagement_WebApp.Controllers
 {
     public class HomeController : Controller
     {
-        
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
-        
 
-
-        //Will get list of Devices from the DeviceService
         public IActionResult Index()
         {
-         
             return View();
         }
 

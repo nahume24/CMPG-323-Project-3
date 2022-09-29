@@ -28,21 +28,18 @@ namespace DeviceManagement_WebApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ConnectedOfficeContext>(options =>
+            services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDbContext<ApplicationDbContext>(options =>
+            services.AddDbContext<ConnectedOfficeContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
-
-            services.AddTransient(typeof(IGenericRepository<>), typeof(IGenericRepository<>));
-            services.AddTransient<ICategoriesRepository, ICategoriesRepository>();
-            services.AddTransient<IDeviceRepository, IDeviceRepository>();
-            services.AddTransient<IZoneRepository, IZoneRepository>();
+            services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddTransient<ICategoriesRepository, CategoriesRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -73,8 +70,6 @@ namespace DeviceManagement_WebApp
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
-
-                
             });
         }
     }
