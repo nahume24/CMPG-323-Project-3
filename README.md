@@ -2,18 +2,23 @@
 ![web api](https://user-images.githubusercontent.com/38375869/191209969-74caa68e-3ed2-4ee1-bd25-fd5d98a7b6ff.gif)
  
  # Credit
- The ConnectOffice, Database.sql and IOT Note Project it belongs to MS Jacqui Muller. I forked her repository called CMPG-323-IOT-Device-Manangement I then merge it to my repository in order to make it private. 
+ The ConnectOffice, Database.sql and IOT Note Project it belongs to MS Jacqui Muller. I forked her repository called CMPG-323-IOT-Device-Manangement I then merge it to my repository in order to make it private. i have maded changed to the intial project but pushed the difference to the development branch.
  
  # Project set up/ Desciption
 The Project is based on ASP.NET Core MVC. It will be more focused on the Modellers,View and Controllers. The current GitHub Project was forked and given a new name. Will have to create an appsettings.json to add the connnection string to connect to the hosted database. Standards and Patterns will be created to  enhanced and improved the project. Also will demo the understaning of architectural patterns.Web API will be hosted on Azure.
-# How stakeholders will use the report
 
 # How the user would use the App
+
 The user will have to register then login. When registering you have user a valid email adress and type your password. After registering this means that your details have been stored on the database. When you login it will regret you with your email address.
+
 The resource group:rgProject 3
+
 App service: https://devicemanagementwebapp20220929133044.azurewebsites.net
+
 Intial a registration.
+
 32210310@student365.msfed.nwu.ac.za
+
 password:Nahume123!
 
 # Reference
