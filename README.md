@@ -9,8 +9,10 @@ The Project is based on ASP.NET Core MVC. It will be more focused on the Modelle
 # How stakeholders will use the report
 
 # How the user would use the App
+The user will have to register then login. When registering you have user a valid email adress and type your password. After registering this means that your details have been stored on the database. When you login it will regret you with your email address.
 The resource group:rgProject 3
-App service: 
+App service: https://devicemanagementwebapp20220929133044.azurewebsites.net
+Intial a registration.
 32210310@student365.msfed.nwu.ac.za
 password:Nahume123!
 
